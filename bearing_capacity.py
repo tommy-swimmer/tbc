@@ -40,3 +40,7 @@ N_gamma = 6
 # Circular Foundation Equation
 q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * B * N_gamma)
 print('Ultimate Bearing Capacity is:', math.ceil(q_u/1000), 'kip/ft^2', sep=" ")
+
+# Print out results
+print('Ultimate Bearing Capacity:', math.ceil(q_u/1000), 'kip/ft^2',
+      sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
