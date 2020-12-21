@@ -50,3 +50,8 @@ FS = 3
 q_all = (q_u/1000) / FS
 print('\nq_all:', math.ceil(q_all), 'kip/ft^2', sep=" ")
 print('q_all:', math.ceil(q_all), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+
+# Total allowable gross load
+Q = q_all * math.pi * ((B/12)/2)**2
+print('\nQ:', math.ceil(Q), 'kip/ft^2', sep=" ")
+print('Q:', math.ceil(Q), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))

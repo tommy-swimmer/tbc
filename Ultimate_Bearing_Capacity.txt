@@ -1,2 +1,3 @@
 Ultimate Bearing Capacity: 17 kip/ft^2
 q_all: 6 kip/ft^2
+Q: 2 kip/ft^2
