@@ -23,12 +23,12 @@ else:
     # N_c,N_q,N_gamma = bearing capacity factors that are nondimenstional and are functions only of the soil friction angle psi'
 
 # Cohesion of soil
-c_prime = 1 # kips/ft^2 (see Notion table for details, listed as Medium cohesive soil)
+c_prime = 420 # lb/ft^2 (soil type SM-saturated)
 
 #  Unit weight of soil: gamma
 gamma = 75 # lb/ft^3 (approximate weight of loose earth)
 
-q = gamma * D_f
+q = gamma * (D_f/12) # lb
 
 # Let's make phi_prime = 23 degrees
 # Based on Table 3.1...
@@ -44,3 +44,9 @@ print('Ultimate Bearing Capacity is:', math.ceil(q_u/1000), 'kip/ft^2', sep=" ")
 # Print out results
 print('Ultimate Bearing Capacity:', math.ceil(q_u/1000), 'kip/ft^2',
       sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+
+# Factor of Safety
+FS = 3
+q_all = (q_u/1000) / FS
+print('\nq_all:', math.ceil(q_all), 'kip/ft^2', sep=" ")
+print('q_all:', math.ceil(q_all), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))

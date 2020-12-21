@@ -1,3 +1,2 @@
-
-Ultimate Bearing Capacity: 5955 kip/ft^2
-Ultimate Bearing Capacity: 38 kip/ft^2
+Ultimate Bearing Capacity: 17 kip/ft^2
+q_all: 6 kip/ft^2
