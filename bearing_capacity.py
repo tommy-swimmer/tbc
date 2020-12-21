@@ -26,7 +26,7 @@ else:
 c_prime = 1 # kips/ft^2 (see Notion table for details, listed as Medium cohesive soil)
 
 #  Unit weight of soil: gamma
-gamma = 75 / 0.0063658804842887 # N/m^3 (approximate weight of loose earth)
+gamma = 75 # lb/ft^3 (approximate weight of loose earth)
 
 q = gamma * D_f
 
