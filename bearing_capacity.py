@@ -56,6 +56,6 @@ print('\nq_all:', math.floor(q_all), 'kip/ft^2', sep=" ")
 print('q_all:', math.floor(q_all), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Total allowable gross load
-Q = q_all * math.pi * ((B/12)/2)**2
+Q = q_all * ((B/12))**2
 print('\nQ:', math.floor(Q), 'kip/ft^2', sep=" ")
 print('Q:', math.floor(Q), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
