@@ -9,7 +9,7 @@ import math
 # Qualify "shallow foundation" description.
 # D_f >> B
 D_f = 48 # inches
-B = 8 # inches
+B = 16 # inches
 shallow_foundation = D_f / 8
 if shallow_foundation <= 3: # conservative analysis of shallow foundation 
     print('Foundation is considered a deep foundation.')
