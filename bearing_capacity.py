@@ -23,23 +23,27 @@ else:
     # N_c,N_q,N_gamma = bearing capacity factors that are nondimenstional and are functions only of the soil friction angle psi'
 
 # Cohesion of soil
-c_prime = 420 # lb/ft^2 (soil type SM-saturated)
+c_prime = 420 # lb/ft^2 (soil type SM-saturated, UCSC Classification)
 
 #  Unit weight of soil: gamma
 gamma = 75 # lb/ft^3 (approximate weight of loose earth)
 
-q = gamma * (D_f/12) # lb
+q = gamma * (D_f/12) # dimensionless (?)
 
-# Let's make phi_prime = 23 degrees
+# Let's make phi_prime = 23 degrees (can find experimentally if needed)
 # Based on Table 3.1...
 
 N_c = 21.75
 N_q = 10.23
 N_gamma = 6
 
+# Record Used Values
+print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', math.ceil(q),
+    '\nN_c', N_c, '\nN_q', N_q, '\nN_gamma', N_gamma, sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+
 # Circular Foundation Equation
 q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * B * N_gamma)
-print('Ultimate Bearing Capacity is:', math.ceil(q_u/1000), 'kip/ft^2', sep=" ")
+print('\nUltimate Bearing Capacity is:', math.ceil(q_u/1000), 'kip/ft^2', sep=" ")
 
 # Print out results
 print('Ultimate Bearing Capacity:', math.ceil(q_u/1000), 'kip/ft^2',
