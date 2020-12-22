@@ -6,6 +6,8 @@ Useful Links:
 - [Unified Soil Classification System](https://en.wikipedia.org/wiki/Unified_Soil_Classification_System) 
 - [Soil Weight](https://www.engineeringtoolbox.com/earth-soil-weight-d_1349.html)
 - [Cohesion](http://www.geotechnicalinfo.com/cohesion.html)
+- [Soil Bearing Capacities](https://www.concretenetwork.com/concrete/footing_fundamentals/why_soils_matter.htm)
+- [Pier Foundation Examples](https://i.pinimg.com/originals/4d/f9/48/4df948798c233b16adf6d87a333cc986.jpg)
 
 All other values from *Principles of Foundation Engineering, Seventh Edition, by Braja Das*
 (specifcally Table 3.1, page 139)
