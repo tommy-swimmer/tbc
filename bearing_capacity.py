@@ -9,7 +9,7 @@ import math
 # Qualify "shallow foundation" description.
 # D_f >> B
 D_f = 48 # inches
-B = 16 # inches
+B = 8 # inches
 shallow_foundation = D_f / 8
 if shallow_foundation <= 3: # conservative analysis of shallow foundation 
     print('Foundation is considered a deep foundation.')
@@ -38,24 +38,24 @@ N_q = 10.23
 N_gamma = 6
 
 # Record Used Values
-print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', math.floor(q),
+print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', q,
     '\nN_c', N_c, '\nN_q', N_q, '\nN_gamma', N_gamma, sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Circular Foundation Equation
 q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (B/12) * N_gamma)
-print('\nUltimate Bearing Capacity is:', math.floor(q_u/1000), 'kip/ft^2', sep=" ")
+print('\nUltimate Bearing Capacity is:', q, 'kip/ft^2', sep=" ")
 
 # Print out results
-print('Ultimate Bearing Capacity:', math.floor(q_u/1000), 'kip/ft^2',
+print('Ultimate Bearing Capacity:', q_u/1000, 'kip/ft^2',
       sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Factor of Safety
 FS = 3
 q_all = (q_u/1000) / FS
-print('\nq_all:', math.floor(q_all), 'kip/ft^2', sep=" ")
-print('q_all:', math.floor(q_all), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+print('\nq_all:', q_all, 'kip/ft^2', sep=" ")
+print('q_all:', q_all, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Total allowable gross load
 Q = q_all * ((B/12))**2
-print('\nQ:', math.floor(Q), 'kip/ft^2', sep=" ")
-print('Q:', math.floor(Q), 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+print('\nQ:', Q, 'kip/ft^2', sep=" ")
+print('Q:', Q, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))

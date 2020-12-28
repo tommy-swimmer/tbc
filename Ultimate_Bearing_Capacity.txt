@@ -7,3 +7,4 @@ N_gamma 6
 Ultimate Bearing Capacity: 15 kip/ft^2
 q_all: 5 kip/ft^2
 Q: 8 kip/ft^2
+
