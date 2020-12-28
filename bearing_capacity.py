@@ -9,20 +9,18 @@ import sys
 
 # Qualify "shallow foundation" description.
 # D_f >> B
-print('Enter depth of foundation')
-D_f = input(int()) # 48 inches
+D_f = int(input('Enter depth of foundation: ')) # 48 inches
 
-print('Enter width of foundation')
-B = input(int()) # 8 inches
+B = int(input('Enter width of foundation: ')) # 8 inches
 
-shallow_foundation = int(D_f) / int(B)
+shallow_foundation = D_f / B
 if int(shallow_foundation) <= 3: # conservative analysis of shallow foundation 
     print('Foundation is considered a deep foundation.')
 else:
     print('\n Not considered a shallow foundation! \n D_f / B:',shallow_foundation, sep=" ")
 
 # Prompt to continue or not.
-print('Are you sure? (y/n)')
+print('\nAre you sure? To continue. (y/n)')
 prompt = input()
 if prompt != "y":
     sys.exit("User inputted n")
@@ -39,7 +37,7 @@ c_prime = 420 # 420 lb/ft^2 (soil type SM-saturated, UCSC Classification)
 #  Unit weight of soil: gamma
 gamma = 75 # 75 lb/ft^3 (approximate weight of loose earth)
 
-q = gamma * (int(D_f)/12) # dimensionless (?)
+q = gamma * (D_f/12) # dimensionless (?)
 
 # Let's make phi_prime = 23 degrees (can find experimentally if needed)
 # Based on Table 3.1...
@@ -59,7 +57,7 @@ elif used_prompt =="n":
 
 #-------------- MAIN CALCULATION ----------------------------------------------
 # Circular Foundation Equation
-q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (int(B)/12) * N_gamma)
+q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (B/12) * N_gamma)
 print('\nUltimate Bearing Capacity is:', q, 'kip/ft^2', sep=" ")
 #------------------------------------------------------------------------------
 
@@ -74,7 +72,7 @@ print('\nq_all:', q_all, 'kip/ft^2', sep=" ")
 print('q_all:', q_all, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Total allowable gross load
-Q = q_all * math.pi * ((int(B)/12)/2)**2
+Q = q_all * math.pi * ((B/12)/2)**2
 print('\nQ:', Q, 'kip/ft^2', sep=" ")
 print('Q:', Q, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
