@@ -8,3 +8,13 @@ Ultimate Bearing Capacity: 15 kip/ft^2
 q_all: 5 kip/ft^2
 Q: 8 kip/ft^2
 
+c_prime: 0 lb/ft^2 
+gamma: 75 lb/ft^3 
+q: 300.0 
+N_c 37.16 
+N_q 22.46 
+N_gamma 19.13
+
+q_u: 7.02495 kip/ft^2
+q_all: 2.34165 kip/ft^2
+Q: 0.8173900485865042 kip
