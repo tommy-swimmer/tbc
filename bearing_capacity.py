@@ -77,3 +77,6 @@ print('q_all:', q_all, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity
 Q = q_all * math.pi * ((int(B)/12)/2)**2
 print('\nQ:', Q, 'kip/ft^2', sep=" ")
 print('Q:', Q, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+
+# Reminder of .txt file export
+print('\nFinal results are also recorded in the Ultimate_Bearing_Capacity text file.')
