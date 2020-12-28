@@ -49,12 +49,19 @@ N_q = 10.23 # 10.23
 N_gamma = 6 # 6
 
 # Record Used Values
-print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', q,
+print('Would you like to record used values? (y/n)')
+used_prompt = input()
+if used_prompt =="y":
+    print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', q,
     '\nN_c', N_c, '\nN_q', N_q, '\nN_gamma', N_gamma, sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
+elif used_prompt =="n":
+    print('No recorded values')
 
+#-------------- MAIN CALCULATION ----------------------------------------------
 # Circular Foundation Equation
 q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (int(B)/12) * N_gamma)
 print('\nUltimate Bearing Capacity is:', q, 'kip/ft^2', sep=" ")
+#------------------------------------------------------------------------------
 
 # Print out results
 print('Ultimate Bearing Capacity:', q_u/1000, 'kip/ft^2',
