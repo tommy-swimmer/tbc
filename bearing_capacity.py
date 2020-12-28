@@ -34,19 +34,19 @@ if prompt != "y":
     # N_c,N_q,N_gamma = bearing capacity factors that are nondimenstional and are functions only of the soil friction angle psi'
 
 # Cohesion of soil
-c_prime = 420 # lb/ft^2 (soil type SM-saturated, UCSC Classification)
+c_prime = 420 # 420 lb/ft^2 (soil type SM-saturated, UCSC Classification)
 
 #  Unit weight of soil: gamma
-gamma = 75 # lb/ft^3 (approximate weight of loose earth)
+gamma = 75 # 75 lb/ft^3 (approximate weight of loose earth)
 
 q = gamma * (int(D_f)/12) # dimensionless (?)
 
 # Let's make phi_prime = 23 degrees (can find experimentally if needed)
 # Based on Table 3.1...
 
-N_c = 21.75
-N_q = 10.23
-N_gamma = 6
+N_c = 21.75 # 21.75
+N_q = 10.23 # 10.23
+N_gamma = 6 # 6
 
 # Record Used Values
 print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', q,
@@ -67,6 +67,6 @@ print('\nq_all:', q_all, 'kip/ft^2', sep=" ")
 print('q_all:', q_all, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Total allowable gross load
-Q = q_all * ((int(B)/12))**2
+Q = q_all * math.pi * ((int(B)/12)/2)**2
 print('\nQ:', Q, 'kip/ft^2', sep=" ")
 print('Q:', Q, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
