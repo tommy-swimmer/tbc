@@ -58,7 +58,7 @@ elif used_prompt =="n":
 #-------------- MAIN CALCULATION ----------------------------------------------
 # Circular Foundation Equation
 q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (B/12) * N_gamma)
-print('\nUltimate Bearing Capacity is:', q, 'kip/ft^2', sep=" ")
+print('\nq_u:', q_u, 'kip/ft^2', sep=" ")
 #------------------------------------------------------------------------------
 
 # Print out results
