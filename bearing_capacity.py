@@ -23,7 +23,7 @@ else:
 print('\nAre you sure? To continue. (y/n)')
 prompt = input()
 if prompt != "y":
-    sys.exit("User inputted n")
+    sys.exit("Exit reason: User inputted n")
     
 # Must define:
     # c' = cohesion of soil
