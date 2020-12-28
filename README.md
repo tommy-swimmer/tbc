@@ -19,3 +19,5 @@ Main Equation Used:
 - Verify calculations with concrete calculations.
 - Check units with team.
 - Update readme file with better explanation.
+- Add input code
+- Add prompt to save or not to txt file.
