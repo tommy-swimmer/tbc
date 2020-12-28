@@ -62,7 +62,7 @@ print('\nq_u:', q_u, 'kip/ft^2', sep=" ")
 #------------------------------------------------------------------------------
 
 # Print out results
-print('Ultimate Bearing Capacity:', q_u/1000, 'kip/ft^2',
+print('\nq_u:', q_u/1000, 'kip/ft^2',
       sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Factor of Safety
