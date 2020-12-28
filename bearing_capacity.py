@@ -5,6 +5,7 @@
 # Fort Lewis College
 
 import math
+import sys
 
 # Qualify "shallow foundation" description.
 # D_f >> B
@@ -20,6 +21,12 @@ if int(shallow_foundation) <= 3: # conservative analysis of shallow foundation
 else:
     print('\n Not considered a shallow foundation! \n D_f / B:',shallow_foundation, sep=" ")
 
+# Prompt to continue or not.
+print('Are you sure? (y/n)')
+prompt = input()
+if prompt != "y":
+    sys.exit("User inputted n")
+    
 # Must define:
     # c' = cohesion of soil
     # gamma = unit weight of soil
