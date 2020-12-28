@@ -8,13 +8,17 @@ import math
 
 # Qualify "shallow foundation" description.
 # D_f >> B
-D_f = 48 # inches
-B = 8 # inches
-shallow_foundation = D_f / 8
-if shallow_foundation <= 3: # conservative analysis of shallow foundation 
+print('Enter depth of foundation')
+D_f = input(int()) # 48 inches
+
+print('Enter width of foundation')
+B = input(int()) # 8 inches
+
+shallow_foundation = int(D_f) / int(B)
+if int(shallow_foundation) <= 3: # conservative analysis of shallow foundation 
     print('Foundation is considered a deep foundation.')
 else:
-    print('D_f / B:',shallow_foundation, sep=" ")
+    print('\n Not considered a shallow foundation! \n D_f / B:',shallow_foundation, sep=" ")
 
 # Must define:
     # c' = cohesion of soil
@@ -28,7 +32,7 @@ c_prime = 420 # lb/ft^2 (soil type SM-saturated, UCSC Classification)
 #  Unit weight of soil: gamma
 gamma = 75 # lb/ft^3 (approximate weight of loose earth)
 
-q = gamma * (D_f/12) # dimensionless (?)
+q = gamma * (int(D_f)/12) # dimensionless (?)
 
 # Let's make phi_prime = 23 degrees (can find experimentally if needed)
 # Based on Table 3.1...
@@ -42,7 +46,7 @@ print('c_prime:', c_prime, 'lb/ft^2', '\ngamma:', gamma, 'lb/ft^3', '\nq:', q,
     '\nN_c', N_c, '\nN_q', N_q, '\nN_gamma', N_gamma, sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Circular Foundation Equation
-q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (B/12) * N_gamma)
+q_u = (1.3 * c_prime * N_c) + (q * N_q) + (0.3 * gamma * (int(B)/12) * N_gamma)
 print('\nUltimate Bearing Capacity is:', q, 'kip/ft^2', sep=" ")
 
 # Print out results
@@ -56,6 +60,6 @@ print('\nq_all:', q_all, 'kip/ft^2', sep=" ")
 print('q_all:', q_all, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Total allowable gross load
-Q = q_all * ((B/12))**2
+Q = q_all * ((int(B)/12))**2
 print('\nQ:', Q, 'kip/ft^2', sep=" ")
 print('Q:', Q, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
