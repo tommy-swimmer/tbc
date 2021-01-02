@@ -8,3 +8,15 @@ Ultimate Bearing Capacity: 15 kip/ft^2
 q_all: 5 kip/ft^2
 Q: 8 kip/ft^2
 
+
+Trautner Calculation, phi = 25
+c_prime: 100 lb/ft^2 
+gamma: 125 lb/ft^3 
+q: 500.0 
+N_c 25.13 
+N_q 12.72 
+N_gamma 8.34
+
+q_u: 9.8354 kip/ft^2
+q_all: 3.2784666666666666 kip/ft^2
+Q: 4.5776030200173405 kip
