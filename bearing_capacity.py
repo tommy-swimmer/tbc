@@ -72,7 +72,7 @@ print('\nq_all:', q_all, 'kip/ft^2', sep=" ")
 print('q_all:', q_all, 'kip/ft^2', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
 # Total allowable gross load
-Q = (q_all * math.pi * ((B/12)/2)**2)*4
+Q = (q_all * math.pi * ((B/12)/2)**2)*6
 print('\nQ:', Q, 'kip', sep=" ")
 print('Q:', Q, 'kip', sep=" ", file=open("Ultimate_Bearing_Capacity.txt", "a"))
 
