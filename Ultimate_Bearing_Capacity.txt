@@ -17,7 +17,7 @@ N_c 25.13
 N_q 12.72 
 N_gamma 8.34
 
-
+6 pier calculation. with phi = 25 degrees
 c_prime: 150 lb/ft^2 
 gamma: 125 lb/ft^3 
 q: 375.0 
