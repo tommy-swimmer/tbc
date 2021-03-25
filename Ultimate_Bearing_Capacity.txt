@@ -37,3 +37,25 @@ N_gamma 19.13
 q_u: 12.370875 kip/ft^2
 q_all: 4.123625 kip/ft^2
 Q: 19.432125009238813 kip
+c_prime: 125 lb/ft^2 
+gamma: 125 lb/ft^3 
+q: 250.0 
+N_c 37.16 
+N_q 22.46 
+N_gamma 19.13
+
+q_u: 12.370875 kip/ft^2
+q_all: 4.123625 kip/ft^2
+Q: 19.432125009238813 kip
+
+Newest Calculation 03/25
+c_prime: 125 lb/ft^2 
+gamma: 125 lb/ft^3 
+q: 250.0 
+N_c 37.16 
+N_q 22.46 
+N_gamma 19.13
+
+q_u: 12.370875 kip/ft^2
+q_all: 4.123625 kip/ft^2
+Q: 19.432125009238813 kip
