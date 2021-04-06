@@ -40,7 +40,7 @@ c_prime = int(input('Enter cohesion: '))
 # 75 lb/ft^3 (approximate weight of loose earth)
 gamma = int(input('Enter gamma: '))
 
-q = gamma * (D_f/12)  # dimensionless (?)
+q = gamma * (D_f/12)  # lb/ft
 
 # Let's make phi_prime = 23 degrees (can find experimentally if needed)
 # Based on Table 3.1...
